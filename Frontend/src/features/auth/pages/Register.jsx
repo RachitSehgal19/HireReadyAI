@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { useNavigate, Link } from 'react-router'
 import { useAuth } from '../hooks/useAuth'
+import Navbar from '../../../components/Navbar'
 
 const Register = () => {
 
@@ -22,7 +23,9 @@ const Register = () => {
     }
 
     return (
-        <main>
+        <>
+            <Navbar />
+            <main>
             <div className="form-container">
                 <h1>Register</h1>
 
@@ -53,7 +56,8 @@ const Register = () => {
 
                 <p>Already have an account? <Link to={"/login"} >Login</Link> </p>
             </div>
-        </main>
+            </main>
+        </>
     )
 }
 

@@ -1,0 +1,99 @@
+// ── Navbar Styles ────────────────────────────────────────────────────────────
+
+$bg-navbar: #0d1117;
+$border-color: #2a3348;
+$accent: #ff2d78;
+$text-primary: #e6edf3;
+$font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+.navbar {
+    width: 100%;
+    background-color: $bg-navbar;
+    border-bottom: 1px solid $border-color;
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: $font-stack;
+}
+
+.navbar__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__logo-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    font-family: $font-stack;
+
+    &:hover {
+        background-color: rgba($accent, 0.1);
+        transform: translateX(2px);
+    }
+
+    &:active {
+        transform: translateX(0);
+    }
+}
+
+.navbar__logo-emoji {
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar__logo-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $text-primary;
+    letter-spacing: 0.5px;
+
+    background: linear-gradient(135deg, $accent, lighten($accent, 10%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// Logout Button
+.navbar__logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 1.5px solid $accent;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: $accent;
+    font-family: $font-stack;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+
+    svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        background-color: rgba($accent, 0.1);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($accent, 0.2);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}

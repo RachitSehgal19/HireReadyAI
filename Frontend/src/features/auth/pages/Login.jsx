@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { useNavigate, Link } from 'react-router'
 import "../auth.form.scss"
 import { useAuth } from '../hooks/useAuth'
+import Navbar from '../../../components/Navbar'
 
 const Login = () => {
 
@@ -23,7 +24,9 @@ const Login = () => {
 
 
     return (
-        <main>
+        <>
+            <Navbar />
+            <main>
             <div className="form-container">
                 <h1>Login</h1>
                 <form onSubmit={handleSubmit}>
@@ -43,7 +46,8 @@ const Login = () => {
                 </form>
                 <p>Don't have an account? <Link to={"/register"} >Register</Link> </p>
             </div>
-        </main>
+            </main>
+        </>
     )
 }
 

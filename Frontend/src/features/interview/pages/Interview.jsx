@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import '../style/interview.scss'
 import { useInterview } from '../hooks/useInterview.js'
 import { useNavigate, useParams } from 'react-router'
+import Navbar from '../../../components/Navbar'
 
 
 
@@ -85,8 +86,10 @@ const Interview = () => {
 
 
     return (
-        <div className='interview-page'>
-            <div className='interview-layout'>
+        <>
+            <Navbar />
+            <div className='interview-page'>
+                <div className='interview-layout'>
 
                 {/* ── Left Nav ── */}
                 <nav className='interview-nav'>
@@ -194,7 +197,8 @@ const Interview = () => {
 
                 </aside>
             </div>
-        </div>
+            </div>
+        </>
     )
 }
 
